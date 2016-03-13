@@ -1,0 +1,19 @@
+<div class="track track_playing">
+	<img src="<%=track.urli%>">
+	<p class="songname"><%=track.name%></p>
+	<audio src="<%=track.url%>" type="audio/mpeg" controls="controls"></audio>
+
+  	<form action="/tracks/add_playlist/<%=track.name%>/#about" method="post" enctype="multipart/form-data">  
+		<label class="upload_field">Upload a new track:</label> <br><br>
+  		<span class="btn btn-default btn-file">
+  			Add to playlist: <input type="text" name="pl">
+  		</span> <br><br>
+  		<button type="submit" class="btn btn-default">Submit</button><br><br>
+  	</form>
+	
+	<form method="post" action="/tracks/<%=track.name%>?_method=delete">
+	    <button type="submit" class="btn btn-default" onClick="return confirm('Delete: <%=track.name%>. Are you sure? ');">
+	      Delete track
+	    </button>
+  	</form>
+</div>

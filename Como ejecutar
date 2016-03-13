@@ -1,0 +1,20 @@
+////////////README///////////
+
+Para ejecutar la aplicación seguir los pasos indicados a continuación:
+
+EN LOCAL:
+
+En un terminal ir a CDPSFYlocal y efectuar npm start
+En otro terminal ir a APIRESTlocal y efectuar node app.js
+En otro terminal escribir mongo y después use tracks
+Abrir navegador y entrar en localhost:8080
+
+EN REMOTO:
+
+En un terminal ir a p7 y efectuar el create.
+Al terminar el create ejecutar el script de autoconfiguración con ./script.py
+Despues abrir un terminal y conectarnos a s1 mediante ssh: ssh root@s1 (contraseña xxxx), y escribir "mongod &"
+Abrir otro ssh con s1 y escribir "mongo use tracks"
+En otro terminal s1 ir a CDPSFY y ejecutar "npm start"
+En s2 hacer un mv de la imagen por defecto quaver3.png a /mnt/nas
+Abrir navegador y entrar en server.cdpsfy.es
